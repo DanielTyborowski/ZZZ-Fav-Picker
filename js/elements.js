@@ -1,6 +1,6 @@
 'use strict';
 
-const elments = {
+const elements = {
 
 }   
 
