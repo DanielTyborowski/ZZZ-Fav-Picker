@@ -1,5 +1,73 @@
+
+body {
+    background-image: url(../data/img/background.webp);
+    background-color: black;
+}
+
+
+
+
+
+
 #agent-grid {
     display: grid;
-    grid-template-columns: 200px repeat(7, 200px);
+    grid-template-columns: 180px repeat(7, 180px);
     gap: 5px;
+}
+
+
+
+.cell {
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: gray;
+}
+
+
+
+.first-cell{
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: gray;
+}
+
+
+.attribute-cell{
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.speciality-cell{
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: gray;
 }

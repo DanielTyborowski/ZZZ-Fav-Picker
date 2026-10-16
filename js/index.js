@@ -13,6 +13,7 @@ function createGrid() {
         content: 'First Cell',
         tagName: 'div',
         id: 'first-cell',
+        cssClassName: 'first-cell',
         parent: elements.agentGrid,
     });
     
@@ -40,6 +41,7 @@ function createGrid() {
         for(const speciality of data.specialities) {
             const cell = dom.create({
                 tagName: 'div',
+                cssClassName: 'cell',
                 parent: elements.agentGrid,
             });
         }
