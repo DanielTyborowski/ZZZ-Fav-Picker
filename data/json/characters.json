@@ -1,0 +1,81 @@
+[
+    { "name": "Alexandrina Sebastiane", "img": "img/chars/Icon_Alexandrina_Sebastiane.png", "attribute": "Electric", "speciality": "Support", "faction": "Victoria Housekeeping Co.", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Anby Demara", "img": "img/chars/Icon_Anby_Demara.png", "attribute": "Electric", "speciality": "Stun", "faction": "Cunning Hares", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Anton Ivanov", "img": "img/chars/Icon_Anton_Ivanov.png", "attribute": "Electric", "speciality": "Attack", "faction": "Belobog Heavy Industries", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Ben Bigger", "img": "img/chars/Icon_Ben_Bigger.png", "attribute": "Fire", "speciality": "Defense", "faction": "Belobog Heavy Industries", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Billy Kid", "img": "img/chars/Icon_Billy_Kid.png", "attribute": "Physical", "speciality": "Attack", "faction": "Cunning Hares", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Corin Wickes", "img": "img/chars/Icon_Corin_Wickes.png", "attribute": "Physical", "speciality": "Attack", "faction": "Victoria Housekeeping Co.", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Ellen Joe", "img": "img/chars/Icon_Ellen_Joe.png", "attribute": "Ice", "speciality": "Attack", "faction": "Victoria Housekeeping Co.", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Grace Howard", "img": "img/chars/Icon_Grace_Howard.png", "attribute": "Electric", "speciality": "Anomaly", "faction": "Belobog Heavy Industries", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Koleda Belobog", "img": "img/chars/Icon_Koleda_Belobog.png", "attribute": "Fire", "speciality": "Stun", "faction": "Belobog Heavy Industries", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Luciana de Montefio", "img": "img/chars/Icon_Luciana_de_Montefio.png", "attribute": "Fire", "speciality": "Support", "faction": "Sons of Calydon", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Nekomiya Mana", "img": "img/chars/Icon_Nekomiya_Mana.png", "attribute": "Physical", "speciality": "Attack", "faction": "Cunning Hares", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Nicole Demara", "img": "img/chars/Icon_Nicole_Demara.png", "attribute": "Ether", "speciality": "Support", "faction": "Cunning Hares", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Piper Wheel", "img": "img/chars/Icon_Piper_Wheel.png", "attribute": "Physical", "speciality": "Anomaly", "faction": "Sons of Calydon", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Soldier 11", "img": "img/chars/Icon_Soldier_11.png", "attribute": "Fire", "speciality": "Attack", "faction": "Obol Squad", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Soukaku", "img": "img/chars/Icon_Soukaku.png", "attribute": "Ice", "speciality": "Support", "faction": "Hollow Special Operations Section 6", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Von Lycaon", "img": "img/chars/Icon_Von_Lycaon.png", "attribute": "Ice", "speciality": "Stun", "faction": "Victoria Housekeeping Co.", "season": 1, "version": "1.0", "voidHunter": false },
+    { "name": "Zhu Yuan", "img": "img/chars/Icon_Zhu_Yuan.png", "attribute": "Ether", "speciality": "Attack", "faction": "Criminal Investigation Special Response Team", "season": 1, "version": "1.0", "voidHunter": false },
+
+    { "name": "Jane Doe", "img": "img/chars/Icon_Jane_Doe.png", "attribute": "Physical", "speciality": "Anomaly", "faction": "Criminal Investigation Special Response Team", "season": 1, "version": "1.1", "voidHunter": false },
+    { "name": "Qingyi", "img": "img/chars/Icon_Qingyi.png", "attribute": "Electric", "speciality": "Stun", "faction": "Criminal Investigation Special Response Team", "season": 1, "version": "1.1", "voidHunter": false },
+    { "name": "Seth Lowell", "img": "img/chars/Icon_Seth_Lowell.png", "attribute": "Electric", "speciality": "Defense", "faction": "Criminal Investigation Special Response Team", "season": 1, "version": "1.1", "voidHunter": false },
+
+    { "name": "Burnice White", "img": "img/chars/Icon_Burnice_White.png", "attribute": "Fire", "speciality": "Anomaly", "faction": "Sons of Calydon", "season": 1, "version": "1.2", "voidHunter": false },
+    { "name": "Caesar King", "img": "img/chars/Icon_Caesar_King.png", "attribute": "Physical", "speciality": "Defense", "faction": "Sons of Calydon", "season": 1, "version": "1.2", "voidHunter": false },
+
+    { "name": "Lighter", "img": "img/chars/Icon_Lighter.png", "attribute": "Fire", "speciality": "Stun", "faction": "Sons of Calydon", "season": 1, "version": "1.3", "voidHunter": false },
+    { "name": "Tsukishiro Yanagi", "img": "img/chars/Icon_Tsukishiro_Yanagi.png", "attribute": "Electric", "speciality": "Anomaly", "faction": "Hollow Special Operations Section 6", "season": 1, "version": "1.3", "voidHunter": false },
+
+    { "name": "Asaba Harumasa", "img": "img/chars/Icon_Asaba_Harumasa.png", "attribute": "Electric", "speciality": "Attack", "faction": "Hollow Special Operations Section 6", "season": 1, "version": "1.4", "voidHunter": false },
+    { "name": "Hoshimi Miyabi", "img": "img/chars/Icon_Hoshimi_Miyabi.png", "attribute": "Ice", "subAttribute": "Frost", "speciality": "Anomaly", "faction": "Hollow Special Operations Section 6", "season": 1, "version": "1.4", "voidHunter": true },
+
+    { "name": "Astra Yao", "img": "img/chars/Icon_Astra_Yao.png", "attribute": "Ether", "speciality": "Support", "faction": "Stars of Lyra", "season": 1, "version": "1.5", "voidHunter": false },
+    { "name": "Evelyn Chevalier", "img": "img/chars/Icon_Evelyn_Chevalier.png", "attribute": "Fire", "speciality": "Attack", "faction": "Stars of Lyra", "season": 1, "version": "1.5", "voidHunter": false },
+
+    { "name": "Pulchra Fellini", "img": "img/chars/Icon_Pulchra_Fellini.png", "attribute": "Physical", "speciality": "Stun", "faction": "Sons of Calydon", "season": 1, "version": "1.6", "voidHunter": false },
+    { "name": "Soldier 0 - Anby", "img": "img/chars/Icon_Soldier_0_Anby.png", "attribute": "Electric", "speciality": "Attack", "faction": "Defense Force - Silver Squad", "season": 1, "version": "1.6", "voidHunter": false },
+    { "name": "Trigger", "img": "img/chars/Icon_Trigger.png", "attribute": "Electric", "speciality": "Stun", "faction": "Obol Squad", "season": 1, "version": "1.6", "voidHunter": false },
+
+    { "name": "Hugo Vlad", "img": "img/chars/Icon_Hugo_Vlad.png", "attribute": "Ice", "speciality": "Attack", "faction": "Mockingbird", "season": 1, "version": "1.7", "voidHunter": false },
+    { "name": "Vivian Banshee", "img": "img/chars/Icon_Vivian_Banshee.png", "attribute": "Ether", "speciality": "Anomaly", "faction": "Mockingbird", "season": 1, "version": "1.7", "voidHunter": false },
+
+    { "name": "Ju Fufu", "img": "img/chars/Icon_Ju_Fufu.png", "attribute": "Fire", "speciality": "Stun", "faction": "Yunkui Summit", "season": 2, "version": "2.0", "voidHunter": false },
+    { "name": "Pan Yinhu", "img": "img/chars/Icon_Pan_Yinhu.png", "attribute": "Physical", "speciality": "Defense", "faction": "Yunkui Summit", "season": 2, "version": "2.0", "voidHunter": false },
+    { "name": "Yixuan", "img": "img/chars/Icon_Yixuan.png", "attribute": "Ether", "subAttribute": "Auric Ink", "speciality": "Rupture", "faction": "Yunkui Summit", "season": 2, "version": "2.0", "voidHunter": false },
+
+    { "name": "Alice Thymefield", "img": "img/chars/Icon_Alice_Thymefield.png", "attribute": "Physical", "speciality": "Anomaly", "faction": "Spook Shack", "season": 2, "version": "2.1", "voidHunter": false },
+    { "name": "Ukinami Yuzuha", "img": "img/chars/Icon_Ukinami_Yuzuha.png", "attribute": "Physical", "speciality": "Support", "faction": "Spook Shack", "season": 2, "version": "2.1", "voidHunter": false },
+
+    { "name": "Orphie Magnusson & Magus", "img": "img/chars/Icon_Orphie_Magnusson_Magus.png", "attribute": "Fire", "speciality": "Attack", "faction": "Obol Squad", "season": 2, "version": "2.2", "voidHunter": false },
+    { "name": "Seed", "img": "img/chars/Icon_Seed.png", "attribute": "Electric", "speciality": "Attack", "faction": "Obol Squad", "season": 2, "version": "2.2", "voidHunter": false },
+
+    { "name": "Komano Manato", "img": "img/chars/Icon_Komano_Manato.png", "attribute": "Fire", "speciality": "Rupture", "faction": "Spook Shack", "season": 2, "version": "2.3", "voidHunter": false },
+    { "name": "Lucia Elowen", "img": "img/chars/Icon_Lucia_Elowen.png", "attribute": "Ether", "speciality": "Support", "faction": "Spook Shack", "season": 2, "version": "2.3", "voidHunter": false },
+    { "name": "Yidhari Murphy", "img": "img/chars/Icon_Yidhari_Murphy.png", "attribute": "Ice", "speciality": "Rupture", "faction": "Spook Shack", "season": 2, "version": "2.3", "voidHunter": false },
+
+    { "name": "Banyue", "img": "img/chars/Icon_Banyue.png", "attribute": "Fire", "speciality": "Rupture", "faction": "Krampus Compliance Authority", "season": 2, "version": "2.4", "voidHunter": false },
+    { "name": "Dialyn", "img": "img/chars/Icon_Dialyn.png", "attribute": "Physical", "speciality": "Stun", "faction": "Krampus Compliance Authority", "season": 2, "version": "2.4", "voidHunter": false },
+
+    { "name": "Ye Shunguang", "img": "img/chars/Icon_Ye_Shunguang.png", "attribute": "Physical", "subAttribute": "Honed Edge", "speciality": "Attack", "faction": "Yunkui Summit", "season": 2, "version": "2.5", "voidHunter": true },
+    { "name": "Zhao", "img": "img/chars/Icon_Zhao.png", "attribute": "Ice", "speciality": "Defense", "faction": "Krampus Compliance Authority", "season": 2, "version": "2.5", "voidHunter": false },
+
+    { "name": "Aria", "img": "img/chars/Icon_Aria.png", "attribute": "Ether", "speciality": "Anomaly", "faction": "Angels of Delusion", "season": 2, "version": "2.6", "voidHunter": false },
+    { "name": "Sunna", "img": "img/chars/Icon_Sunna.png", "attribute": "Physical", "speciality": "Support", "faction": "Angels of Delusion", "season": 2, "version": "2.6", "voidHunter": false },
+
+    { "name": "Cissia", "img": "img/chars/Icon_Cissia.png", "attribute": "Electric", "speciality": "Attack", "faction": "Metropolitan Order Division", "season": 2, "version": "2.7", "voidHunter": false },
+    { "name": "Nangong Yu", "img": "img/chars/Icon_Nangong_Yu.png", "attribute": "Ether", "speciality": "Stun", "faction": "Angels of Delusion", "season": 2, "version": "2.7", "voidHunter": false },
+
+    { "name": "Promeia", "img": "img/chars/Icon_Promeia.png", "attribute": "Ice", "speciality": "Anomaly", "faction": "Krampus Compliance Authority", "season": 2, "version": "2.8", "voidHunter": false },
+    { "name": "Starlight - Billy Kid", "img": "img/chars/Icon_Starlight_Billy_Kid.png", "attribute": "Physical", "speciality": "Rupture", "faction": "Cunning Hares", "season": 2, "version": "2.8", "voidHunter": false },
+
+    { "name": "Norma Hollowell", "img": "img/chars/Icon_Norma_Hollowell.png", "attribute": "Fire", "speciality": "Stun", "faction": "External Strategy Department", "season": 3, "version": "3.0", "voidHunter": false },
+    { "name": "Pyrois", "img": "img/chars/Icon_Pyrois.png", "attribute": "Ether", "speciality": "Attack", "faction": "Phaethon", "season": 3, "version": "3.0", "voidHunter": false },
+    { "name": "Velina Airgid", "img": "img/chars/Icon_Velina_Airgid.png", "attribute": "Wind", "speciality": "Anomaly", "faction": "External Strategy Department", "season": 3, "version": "3.0", "voidHunter": false },
+
+    { "name": "Remielle Dan", "img": "img/chars/Icon_Remielle_Dan.png", "attribute": "Lumiflux", "speciality": "Anomaly", "faction": "Covenant of Dayat", "season": 3, "version": "3.1", "voidHunter": true },
+    { "name": "Sigrid de L'Azur", "img": "img/chars/Icon_Sigrid_de_LAzur.png", "attribute": "Ice", "speciality": "Attack", "faction": "Airspace Patrol Department", "season": 3, "version": "3.1", "voidHunter": false },
+
+    { "name": "Claret Flint", "img": "img/chars/Icon_Claret_Flint.png", "attribute": "Electric", "speciality": "Armorer", "faction": "Flint Workshop", "season": 3, "version": "3.2", "voidHunter": false },
+    { "name": "Roxy Ifrita Pryce", "img": "img/chars/Icon_Roxy_Ifrita_Pryce.png", "attribute": "Wind", "speciality": "Stun", "faction": "Flint Workshop", "season": 3, "version": "3.2", "voidHunter": false }
+]

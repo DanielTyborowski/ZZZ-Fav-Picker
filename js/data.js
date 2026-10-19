@@ -1,8 +1,18 @@
 'use strict';
 
-const response = await fetch(new URL('../data/json/data.json', import.meta.url));
-const data =  await response.json();
+//const response = await fetch(new URL('../data/json/data.json', import.meta.url));
+//const data =  await response.json();
 
+const [data, characters] = await Promise.all([
+    fetch(new URL('../data/json/data.json', import.meta.url))
+    .then(response => response.json()),
+    
+    fetch(new URL('../data/json/characters.json', import.meta.url))
+    .then(response => response.json()),
+
+    
+
+]);
 
 /*
 const data = {
@@ -51,4 +61,4 @@ const data = {
 
 */
 
-export default data;
+export {data, characters};
