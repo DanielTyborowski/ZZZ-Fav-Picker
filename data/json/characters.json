@@ -1,7 +1,7 @@
 [
     {
         "name": "Rina",
-        "img": "img/chars/Icon_Rina.png",
+        "img": "img/agents/Icon_Rina.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Support",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Anby",
-        "img": "img/chars/Icon_Anby.png",
+        "img": "img/agents/Icon_Rina.png",
         "rank": "A",
         "attribute": "Electric",
         "speciality": "Stun",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Anton",
-        "img": "img/chars/Icon_Anton.png",
+        "img": "img/agents/Icon_Anton.png",
         "rank": "A",
         "attribute": "Electric",
         "speciality": "Attack",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Ben",
-        "img": "img/chars/Icon_Ben.png",
+        "img": "img/agents/Icon_Ben.png",
         "rank": "A",
         "attribute": "Fire",
         "speciality": "Defense",
@@ -45,7 +45,7 @@
     },
     {
         "name": "Billy",
-        "img": "img/chars/Icon_Billy.png",
+        "img": "img/agents/Icon_Billy.png",
         "rank": "A",
         "attribute": "Physical",
         "speciality": "Attack",
@@ -56,7 +56,7 @@
     },
     {
         "name": "Corin",
-        "img": "img/chars/Icon_Corin.png",
+        "img": "img/agents/Icon_Corin.png",
         "rank": "A",
         "attribute": "Physical",
         "speciality": "Attack",
@@ -67,7 +67,7 @@
     },
     {
         "name": "Ellen",
-        "img": "img/chars/Icon_Ellen.png",
+        "img": "img/agents/Icon_Ellen.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Attack",
@@ -78,7 +78,7 @@
     },
     {
         "name": "Grace",
-        "img": "img/chars/Icon_Grace.png",
+        "img": "img/agents/Icon_Grace.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Anomaly",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Koleda",
-        "img": "img/chars/Icon_Koleda.png",
+        "img": "img/agents/Icon_Koleda.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Stun",
@@ -100,7 +100,7 @@
     },
     {
         "name": "Lucy",
-        "img": "img/chars/Icon_Lucy.png",
+        "img": "img/agents/Icon_Lucy.png",
         "rank": "A",
         "attribute": "Fire",
         "speciality": "Support",
@@ -111,7 +111,7 @@
     },
     {
         "name": "Nekomata",
-        "img": "img/chars/Icon_Nekomata.png",
+        "img": "img/agents/Icon_Nekomata.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Attack",
@@ -122,7 +122,7 @@
     },
     {
         "name": "Nicole",
-        "img": "img/chars/Icon_Nicole.png",
+        "img": "img/agents/Icon_Nicole.png",
         "rank": "A",
         "attribute": "Ether",
         "speciality": "Support",
@@ -133,7 +133,7 @@
     },
     {
         "name": "Piper",
-        "img": "img/chars/Icon_Piper.png",
+        "img": "img/agents/Icon_Piper.png",
         "rank": "A",
         "attribute": "Physical",
         "speciality": "Anomaly",
@@ -144,7 +144,7 @@
     },
     {
         "name": "Soldier 11",
-        "img": "img/chars/Icon_Soldier11.png",
+        "img": "img/agents/Icon_Soldier11.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Attack",
@@ -155,7 +155,7 @@
     },
     {
         "name": "Soukaku",
-        "img": "img/chars/Icon_Soukaku.png",
+        "img": "img/agents/Icon_Soukaku.png",
         "rank": "A",
         "attribute": "Ice",
         "speciality": "Support",
@@ -166,7 +166,7 @@
     },
     {
         "name": "Lycaon",
-        "img": "img/chars/Icon_Lycaon.png",
+        "img": "img/agents/Icon_Lycaon.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Stun",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Zhu Yuan",
-        "img": "img/chars/Icon_ZhuYuan.png",
+        "img": "img/agents/Icon_ZhuYuan.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Attack",
@@ -188,7 +188,7 @@
     },
     {
         "name": "Jane",
-        "img": "img/chars/Icon_JaneDoe.png",
+        "img": "img/agents/Icon_JaneDoe.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Anomaly",
@@ -199,7 +199,7 @@
     },
     {
         "name": "Qingyi",
-        "img": "img/chars/Icon_Qingyi.png",
+        "img": "img/agents/Icon_Qingyi.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Stun",
@@ -210,7 +210,7 @@
     },
     {
         "name": "Seth",
-        "img": "img/chars/Icon_Seth.png",
+        "img": "img/agents/Icon_Seth.png",
         "rank": "A",
         "attribute": "Electric",
         "speciality": "Defense",
@@ -221,7 +221,7 @@
     },
     {
         "name": "Burnice",
-        "img": "img/chars/Icon_Burnice.png",
+        "img": "img/agents/Icon_Burnice.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Anomaly",
@@ -232,7 +232,7 @@
     },
     {
         "name": "Caesar",
-        "img": "img/chars/Icon_Caesar.png",
+        "img": "img/agents/Icon_Caesar.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Defense",
@@ -243,7 +243,7 @@
     },
     {
         "name": "Lighter",
-        "img": "img/chars/Icon_Lighter.png",
+        "img": "img/agents/Icon_Lighter.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Stun",
@@ -254,7 +254,7 @@
     },
     {
         "name": "Yanagi",
-        "img": "img/chars/Icon_Yanagi.png",
+        "img": "img/agents/Icon_Yanagi.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Anomaly",
@@ -265,7 +265,7 @@
     },
     {
         "name": "Harumasa",
-        "img": "img/chars/Icon_Harumasa.png",
+        "img": "img/agents/Icon_Harumasa.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Attack",
@@ -276,7 +276,7 @@
     },
     {
         "name": "Miyabi",
-        "img": "img/chars/Icon_Miyabi.png",
+        "img": "img/agents/Icon_Miyabi.png",
         "rank": "S",
         "attribute": "Ice",
         "subAttribute": "Frost",
@@ -288,7 +288,7 @@
     },
     {
         "name": "Astra Yao",
-        "img": "img/chars/Icon_AstraYao.png",
+        "img": "img/agents/Icon_AstraYao.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Support",
@@ -299,7 +299,7 @@
     },
     {
         "name": "Evelyn",
-        "img": "img/chars/Icon_Evelyn.png",
+        "img": "img/agents/Icon_Evelyn.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Attack",
@@ -310,7 +310,7 @@
     },
     {
         "name": "Pulchra",
-        "img": "img/chars/Icon_Pulchra.png",
+        "img": "img/agents/Icon_Pulchra.png",
         "rank": "A",
         "attribute": "Physical",
         "speciality": "Stun",
@@ -321,7 +321,7 @@
     },
     {
         "name": "Soldier 0 - Anby",
-        "img": "img/chars/Icon_Sanby.png",
+        "img": "img/agents/Icon_Sanby.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Attack",
@@ -332,7 +332,7 @@
     },
     {
         "name": "Trigger",
-        "img": "img/chars/Icon_Trigger.png",
+        "img": "img/agents/Icon_Trigger.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Stun",
@@ -343,7 +343,7 @@
     },
     {
         "name": "Hugo",
-        "img": "img/chars/Icon_Hugo.png",
+        "img": "img/agents/Icon_Hugo.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Attack",
@@ -354,7 +354,7 @@
     },
     {
         "name": "Vivian",
-        "img": "img/chars/Icon_Vivian.png",
+        "img": "img/agents/Icon_Vivian.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Anomaly",
@@ -365,7 +365,7 @@
     },
     {
         "name": "Ju Fufu",
-        "img": "img/chars/Icon_JuFufu.png",
+        "img": "img/agents/Icon_JuFufu.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Stun",
@@ -376,7 +376,7 @@
     },
     {
         "name": "Pan Yinhu",
-        "img": "img/chars/Icon_PanYinhu.png",
+        "img": "img/agents/Icon_PanYinhu.png",
         "rank": "A",
         "attribute": "Physical",
         "speciality": "Defense",
@@ -387,7 +387,7 @@
     },
     {
         "name": "Yixuan",
-        "img": "img/chars/Icon_Yixuan.png",
+        "img": "img/agents/Icon_Yixuan.png",
         "rank": "S",
         "attribute": "Ether",
         "subAttribute": "Auric Ink",
@@ -399,7 +399,7 @@
     },
     {
         "name": "Alice",
-        "img": "img/chars/Icon_Alice.png",
+        "img": "img/agents/Icon_Alice.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Anomaly",
@@ -410,7 +410,7 @@
     },
     {
         "name": "Yuzuha",
-        "img": "img/chars/Icon_Yuzuha.png",
+        "img": "img/agents/Icon_Yuzuha.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Support",
@@ -421,7 +421,7 @@
     },
     {
         "name": "Orphie & Magus",
-        "img": "img/chars/Icon_OrphieMagus.png",
+        "img": "img/agents/Icon_OrphieMagus.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Attack",
@@ -432,7 +432,7 @@
     },
     {
         "name": "Seed",
-        "img": "img/chars/Icon_Seed.png",
+        "img": "img/agents/Icon_Seed.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Attack",
@@ -443,7 +443,7 @@
     },
     {
         "name": "Manato",
-        "img": "img/chars/Icon_Manato.png",
+        "img": "img/agents/Icon_Manato.png",
         "rank": "A",
         "attribute": "Fire",
         "speciality": "Rupture",
@@ -454,7 +454,7 @@
     },
     {
         "name": "Lucia",
-        "img": "img/chars/Icon_Lucia.png",
+        "img": "img/agents/Icon_Lucia.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Support",
@@ -465,7 +465,7 @@
     },
     {
         "name": "Yidhari",
-        "img": "img/chars/Icon_Yidhari.png",
+        "img": "img/agents/Icon_Yidhari.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Rupture",
@@ -476,7 +476,7 @@
     },
     {
         "name": "Banyue",
-        "img": "img/chars/Icon_Banyue.png",
+        "img": "img/agents/Icon_Banyue.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Rupture",
@@ -487,7 +487,7 @@
     },
     {
         "name": "Dialyn",
-        "img": "img/chars/Icon_Dialyn.png",
+        "img": "img/agents/Icon_Dialyn.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Stun",
@@ -498,7 +498,7 @@
     },
     {
         "name": "Ye Shunguang",
-        "img": "img/chars/Icon_YeShunguang.png",
+        "img": "img/agents/Icon_YeShunguang.png",
         "rank": "S",
         "attribute": "Physical",
         "subAttribute": "Honed Edge",
@@ -510,7 +510,7 @@
     },
     {
         "name": "Zhao",
-        "img": "img/chars/Icon_Zhao.png",
+        "img": "img/agents/Icon_Zhao.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Defense",
@@ -521,7 +521,7 @@
     },
     {
         "name": "Aria",
-        "img": "img/chars/Icon_Aria.png",
+        "img": "img/agents/Icon_Aria.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Anomaly",
@@ -532,7 +532,7 @@
     },
     {
         "name": "Sunna",
-        "img": "img/chars/Icon_Sunna.png",
+        "img": "img/agents/Icon_Sunna.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Support",
@@ -543,7 +543,7 @@
     },
     {
         "name": "Cissia",
-        "img": "img/chars/Icon_Cissia.png",
+        "img": "img/agents/Icon_Cissia.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Attack",
@@ -554,7 +554,7 @@
     },
     {
         "name": "Nangong Yu",
-        "img": "img/chars/Icon_Nangong_Yu.png",
+        "img": "img/agents/Icon_Nangong_Yu.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Stun",
@@ -565,7 +565,7 @@
     },
     {
         "name": "Promeia",
-        "img": "img/chars/Icon_Promeia.png",
+        "img": "img/agents/Icon_Promeia.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Anomaly",
@@ -576,7 +576,7 @@
     },
     {
         "name": "Starlight Billy",
-        "img": "img/chars/Icon_SBilly.png",
+        "img": "img/agents/Icon_SBilly.png",
         "rank": "S",
         "attribute": "Physical",
         "speciality": "Rupture",
@@ -587,7 +587,7 @@
     },
     {
         "name": "Norma",
-        "img": "img/chars/Icon_Norma.png",
+        "img": "img/agents/Icon_Norma.png",
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Stun",
@@ -598,7 +598,7 @@
     },
     {
         "name": "Pyrois",
-        "img": "img/chars/Icon_Pyrois.png",
+        "img": "img/agents/Icon_Pyrois.png",
         "rank": "I",
         "attribute": "Ether",
         "speciality": "Attack",
@@ -609,7 +609,7 @@
     },
     {
         "name": "Velina",
-        "img": "img/chars/Icon_Velina.png",
+        "img": "img/agents/Icon_Velina.png",
         "rank": "S",
         "attribute": "Wind",
         "speciality": "Anomaly",
@@ -620,7 +620,7 @@
     },
     {
         "name": "Remielle",
-        "img": "img/chars/Icon_Remielle.png",
+        "img": "img/agents/Icon_Remielle.png",
         "rank": "S",
         "attribute": "Lumiflux",
         "speciality": "Anomaly",
@@ -631,7 +631,7 @@
     },
     {
         "name": "Sigrid",
-        "img": "img/chars/Icon_Sigrid.png",
+        "img": "img/agents/Icon_Sigrid.png",
         "rank": "S",
         "attribute": "Ice",
         "speciality": "Attack",
@@ -642,7 +642,7 @@
     },
     {
         "name": "Claret",
-        "img": "img/chars/Icon_Claret.png",
+        "img": "img/agents/Icon_Claret.png",
         "rank": "S",
         "attribute": "Electric",
         "speciality": "Armorer",
@@ -653,7 +653,7 @@
     },
     {
         "name": "Roxy",
-        "img": "img/chars/Icon_Roxy.png",
+        "img": "img/agents/Icon_Roxy.png",
         "rank": "S",
         "attribute": "Wind",
         "speciality": "Stun",

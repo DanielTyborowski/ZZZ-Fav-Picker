@@ -143,30 +143,58 @@ function openSelection(cell, characters) {
     }
 
     characters.forEach(character => {
+        const imgSrc = `./data/${character.img}`;
+
         const option = dom.create({
             tagName: 'button',
-            content: character.name,
+            //content: character.name,
             cssClasses: ['selection-option'],
             attr: {
-                type: 'button'
+                type: 'button',
+                title: character.name,
             },
             listeners: {
                 click: () => {
                     // Ausgewählten Charakter speichern
                     cell.dataset.character = character.name;
 
-                    // Optional: Namen in der Zelle anzeigen
-                    cell.textContent = character.name;
+                    
+                   
+                    dom.create({
+                        tagName: 'img',
+                        cssClassName: 'character-icon',
+                        src: imgSrc,
+                        attr: {
+                            alt: character.name,
+                            title: character.name,    
+                        },
+                        parent: cell,
+                    });
 
-                    // Auswahlfeld schließen
+                    
                     selection.remove();
 
-                    // Hier kannst du weitere Logik ergänzen
+                    
                     console.log('Ausgewählt:', character);
                 }
             },
             parent: list
         });
+        // Bild im Button
+        dom.create({
+            tagName: 'img',
+            cssClassName: 'character-icon',
+            src: imgSrc,
+            attr: { alt: character.name },
+            parent: option,
+        });
+
+        
+        dom.create({
+            tagName: 'span',
+            cssClassName: 'character-name',
+            parent: option,
+        }).textContent = character.name;
     });
 }
 
