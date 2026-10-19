@@ -7,7 +7,7 @@ import {data, characters} from "./data.js";
 
 
 
-function createGrid() {
+function createAgentGrid() {
     
     //console.log(data);
     //console.log(data.specialities);
@@ -96,7 +96,7 @@ function openSelection(cell, characters) {
     const selectionField = dom.create({
         tagName: 'div',
         cssClassName: 'selection-field',
-        parent: elements.agentGrid,
+        parent: elements.main,
     });
 
     const header = dom.create({
@@ -120,7 +120,7 @@ function openSelection(cell, characters) {
             'aria-label': 'Auswahl schließen'
         },
         listeners: {
-            click: () => selection.remove()
+            click: () => selectionField.remove()
         },
         parent: header
     });
@@ -155,11 +155,10 @@ function openSelection(cell, characters) {
             },
             listeners: {
                 click: () => {
-                    // Ausgewählten Charakter speichern
                     cell.dataset.character = character.name;
 
                     
-                   
+            
                     dom.create({
                         tagName: 'img',
                         cssClassName: 'character-icon',
@@ -172,7 +171,7 @@ function openSelection(cell, characters) {
                     });
 
                     
-                    selection.remove();
+                    selectionField.remove();
 
                     
                     console.log('Ausgewählt:', character);
@@ -180,7 +179,7 @@ function openSelection(cell, characters) {
             },
             parent: list
         });
-        // Bild im Button
+
         dom.create({
             tagName: 'img',
             cssClassName: 'character-icon',
@@ -189,20 +188,80 @@ function openSelection(cell, characters) {
             parent: option,
         });
 
-        
-        dom.create({
-            tagName: 'span',
-            cssClassName: 'character-name',
-            parent: option,
-        }).textContent = character.name;
+    
     });
 }
+
+function removeSpaces(string) {
+    return string.replace(/\s/g, '');
+}
+
+function createFactionGrid() {
+    
+
+    for (const faction of data.factions){
+        const factionName = removeSpaces(faction);
+        const factionContainer = dom.create({
+            tagName: 'div',
+            cssClassName: 'faction-container',
+            parent: elements.factionGrid,
+        });
+
+        const factionCell = dom.create({
+            tagName: 'div',
+            cssClassName: 'faction-cell',
+            parent: factionContainer,
+        });
+        dom.create({
+            tagName: 'img',
+            cssClassName: 'faction-icon',
+            parent: factionCell,
+            src: `./data/img/factions/Icon_${factionName}.png`,            
+        })
+        dom.create({
+            tagName: 'span',
+            content: faction,
+            cssClassName: 'faction-name',
+            parent: factionCell,
+      
+        })
+        
+        const cell = dom.create({
+            tagName: 'div',
+            cssClassName: 'faction-selection',
+            parent: factionContainer,
+            attr: {
+                'data-faction': faction,
+            }
+        });
+    }
+
+
+
+}
+
+elements.factionGrid-addEventListener('click', (e) =>{
+    const cell = e.target.closest('.faction-selection');
+    if(!cell) return;
+
+
+    const { faction } = cell.dataset;
+
+
+    const matches = characters.filter(character =>
+        character.faction === faction 
+    );
+    console.log(matches)
+    openSelection(cell,matches);
+})
+
 
 
 
 const init = () => {
     dom.mapping()
-    createGrid();
+    createAgentGrid();
+    createFactionGrid();
     
     
 

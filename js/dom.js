@@ -55,9 +55,9 @@ const dom = {
     },
     
     mapping(){
-
         elements.main = document.querySelector('#main');
         elements.agentGrid = document.querySelector('#agent-grid');
+        elements.factionGrid = document.querySelector('#faction-grid');
     },
 
     appendEventListeners (){

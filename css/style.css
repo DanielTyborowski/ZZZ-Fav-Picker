@@ -2,6 +2,7 @@
 body {
     background-image: url(../data/img/background.webp);
     background-color: black;
+
 }
 
 
@@ -72,18 +73,30 @@ body {
     background-color: gray;
 }
 
+.speciality-icon{
+    width: 100px;
+    height: 100px;
+}
+
+.attribute-icon{
+    width: 100px;
+    height: 100px;
+}
 
 
-
-.selection {
+.selection-field {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
 
-    width: min(400px, 90vw);
-    max-height: 70vh;
+    width: fit-content;
+    min-width: 200px;
+    max-width: 90vw;
+    max-height: 90vh;
+     
+
     overflow-y: auto;
 
     padding: 16px;
@@ -115,6 +128,9 @@ body {
 
 .selection-list {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-content: center;
     gap: 8px;
 }
 
@@ -144,3 +160,56 @@ body {
     border-radius: 15px;
 }
 
+
+
+
+
+
+
+
+#faction-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+
+}
+
+.faction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.faction-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 10px;
+    min-height: 100px;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+}
+
+.faction-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.faction-name {
+    text-align: center;
+    overflow-wrap: anywhere;
+    color: white;
+}
+
+.faction-selection {
+    min-height: 60px;
+
+    border: 1px dashed #777;
+    border-radius: 8px;
+}
