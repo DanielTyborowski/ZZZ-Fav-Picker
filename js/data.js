@@ -1,11 +1,16 @@
 'use strict';
 
+const response = await fetch(new URL('../data/json/data.json', import.meta.url));
+const data =  await response.json();
+
+
+/*
 const data = {
     attributes: [
         "Physical",
         "Fire",
         "Ice",
-        "Electirc",
+        "Electric",
         "Ether",
         "Wind",
         "Lumiflux",
@@ -44,6 +49,6 @@ const data = {
     ],
 }
 
-
+*/
 
 export default data;
