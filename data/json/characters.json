@@ -554,7 +554,7 @@
     },
     {
         "name": "Nangong Yu",
-        "img": "img/agents/Icon_Nangong_Yu.png",
+        "img": "img/agents/Icon_NangongYu.png",
         "rank": "S",
         "attribute": "Ether",
         "speciality": "Stun",
@@ -591,7 +591,7 @@
         "rank": "S",
         "attribute": "Fire",
         "speciality": "Stun",
-        "faction": "Externals Strategy Department",
+        "faction": "External Strategy Department",
         "season": 3,
         "version": "3.0",
         "voidHunter": false
@@ -613,7 +613,7 @@
         "rank": "S",
         "attribute": "Wind",
         "speciality": "Anomaly",
-        "faction": "Externals Strategy Department",
+        "faction": "External Strategy Department",
         "season": 3,
         "version": "3.0",
         "voidHunter": false

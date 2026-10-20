@@ -93,6 +93,21 @@ elements.agentGrid-addEventListener('click', (e) =>{
 
 
 function openSelection(cell, characters) {
+
+    const backdrop = dom.create({
+        tagName: 'div',
+        cssClassName: 'backdrop',
+        parent: elements.main,
+        listeners: {
+            click: () => {
+                backdrop.remove();
+                selectionField.remove();
+            }
+        }
+    });
+
+ 
+
     const selectionField = dom.create({
         tagName: 'div',
         cssClassName: 'selection-field',
@@ -120,7 +135,10 @@ function openSelection(cell, characters) {
             'aria-label': 'Auswahl schließen'
         },
         listeners: {
-            click: () => selectionField.remove()
+            click: () => {
+                backdrop.remove();
+                selectionField.remove();
+            }
         },
         parent: header
     });
@@ -157,23 +175,25 @@ function openSelection(cell, characters) {
                 click: () => {
                     cell.dataset.character = character.name;
 
-                    
-            
-                    dom.create({
-                        tagName: 'img',
-                        cssClassName: 'character-icon',
-                        src: imgSrc,
-                        attr: {
-                            alt: character.name,
-                            title: character.name,    
-                        },
-                        parent: cell,
-                    });
+                    let img = cell.querySelector('.character-icon');
 
-                    
+                    if (img) {
+                        // Bild existiert schon: nur Werte austauschen
+                        img.src = imgSrc;
+                        img.alt = character.name;
+                        img.title = character.name;
+                    } else {
+                        img = dom.create({
+                            tagName: 'img',
+                            cssClassName: 'character-icon',
+                            src: imgSrc,
+                            attr: { alt: character.name, title: character.name },
+                            parent: cell,
+                        });
+                    }
+
                     selectionField.remove();
-
-                    
+                    backdrop.remove();
                     console.log('Ausgewählt:', character);
                 }
             },
@@ -190,6 +210,8 @@ function openSelection(cell, characters) {
 
     
     });
+
+
 }
 
 function removeSpaces(string) {
