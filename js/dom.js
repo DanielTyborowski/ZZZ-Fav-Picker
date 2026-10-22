@@ -58,6 +58,7 @@ const dom = {
         elements.main = document.querySelector('#main');
         elements.agentGrid = document.querySelector('#agent-grid');
         elements.factionGrid = document.querySelector('#faction-grid');
+        elements.specialGrid = document.querySelector('#special-grid');
     },
 
     appendEventListeners (){

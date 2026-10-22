@@ -2,17 +2,76 @@
 
 import dom from "./dom.js";
 import elements from "./elements.js";
-import {data, characters} from "./data.js";
+import {data, characters, wEngines, bangboos, categories} from "./data.js";
 
+
+
+
+
+const sources = { characters, wEngines, bangboos };
+const byId = Object.fromEntries(categories.map(c => [c.id, c]));
+
+function getOptions(category) {
+    const pool = category.options ?? sources[category.source];
+    const filter = Object.entries(category.filter ?? {});
+    return pool.filter(item => filter.every(([key, value]) => item[key] === value));
+}
+
+
+
+const STORAGE_KEY = 'agentSelection';
+
+const readStore = () => {
+    try {
+        return JSON.parse(sessionStorage.getItem(STORAGE_KEY)) ?? {};
+    } catch {
+        return {};
+    }
+};
+
+
+const cellKey = (cell) => {
+    const {selected, ...criteria} = cell.dataset;
+    return Object.entries(criteria).sort().map(([key, value]) => '${key}:${vaue}').join('|');
+};
+
+
+const saveSelection = (cell, name) => {
+    try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify({...readStore(), [cellKey(cell)]: name
+
+        }));
+    } catch {
+
+    }
+}
+
+
+function setCellItem(cell, item) {
+    cell.dataset.selected = item.name;
+
+    const img = cell.querySelector('.character-icon') ?? dom.create({
+        tagName: 'img',
+        cssClassName: 'character-icon',
+        parent: cell,
+    });
+
+    //Object.assign(img, { src: `./data/${item.img}`, alt: item.name, title: item.name });
+}
+
+function restoreSelection() {
+    for (const cell of document.querySelectorAll('.cell, .faction-selection, .category-slot')) {
+        const name = readStore()[cellKey(cell)];
+        const item = name && getMatches(cell).find(i => i.name === name);
+        if (item) setCellItem(cell, item);
+    }
+}
 
 
 
 function createAgentGrid() {
-    
-    //console.log(data);
-    //console.log(data.specialities);
+
     elements.firstCell = dom.create({
-        //content: 'First Cell',
         tagName: 'div',
         id: 'first-cell',
         cssClassName: 'first-cell',
@@ -41,10 +100,8 @@ function createAgentGrid() {
             src: `./data/img/specialities/Icon_${speciality}.png`,            
         })
     }
-    
 
-
-    // attributes
+    // attributes 
     for (const attribute of data.attributes) {
         const cell = dom.create({
             //content: attribute,
@@ -59,7 +116,6 @@ function createAgentGrid() {
             src: `./data/img/attributes/Icon_${attribute}.png`,            
         })
 
-
         for(const speciality of data.specialities) {
             const cell = dom.create({
                 tagName: 'div',
@@ -73,6 +129,8 @@ function createAgentGrid() {
         }
     }
 }
+
+
 
 
 elements.agentGrid-addEventListener('click', (e) =>{
@@ -94,19 +152,17 @@ elements.agentGrid-addEventListener('click', (e) =>{
 
 function openSelection(cell, characters) {
 
+    const close = () => {
+        backdrop.remove();
+        selectionField.remove();
+    }
+
     const backdrop = dom.create({
         tagName: 'div',
         cssClassName: 'backdrop',
         parent: elements.main,
-        listeners: {
-            click: () => {
-                backdrop.remove();
-                selectionField.remove();
-            }
-        }
+        listeners: { click: close}
     });
-
- 
 
     const selectionField = dom.create({
         tagName: 'div',
@@ -122,7 +178,7 @@ function openSelection(cell, characters) {
 
     dom.create({
         tagName: 'h3',
-        content: 'Charakter auswählen',
+        content: 'Choose Charakter',
         parent: header
     })
 
@@ -134,12 +190,8 @@ function openSelection(cell, characters) {
         attr: {
             'aria-label': 'Auswahl schließen'
         },
-        listeners: {
-            click: () => {
-                backdrop.remove();
-                selectionField.remove();
-            }
-        },
+        listeners: {click: close},
+        
         parent: header
     });
 
@@ -152,7 +204,7 @@ function openSelection(cell, characters) {
 
     if (!characters.length) {
         dom.create({
-            content: 'Keine passenden Charaktere gefunden.',
+            content: 'No Charakter available',
             cssClasses: ['selection-empty'],
             parent: list
         });
@@ -165,7 +217,6 @@ function openSelection(cell, characters) {
 
         const option = dom.create({
             tagName: 'button',
-            //content: character.name,
             cssClasses: ['selection-option'],
             attr: {
                 type: 'button',
@@ -278,12 +329,43 @@ elements.factionGrid-addEventListener('click', (e) =>{
 })
 
 
+function specialChoises () {
+
+    for (const category of categories){
+        const card = dom.create({
+            tagName: 'div',
+            cssClassName: 'category-card',
+            parent: elements.spcialGrid
+        });
+        dom.create({
+            tagName: 'span',
+            content: category.title,
+            cssClassName: 'category-title',
+            parent: card
+        });
+        dom.create({
+            cssClassName: 'category-slot', 
+            parent: card, 
+            attr: { 
+                'data-category': category.id 
+            }
+        });
+
+    }
+    
+    
+}
+
+
+
+
 
 
 const init = () => {
     dom.mapping()
     createAgentGrid();
     createFactionGrid();
+    specialChoises();
     
     
 
