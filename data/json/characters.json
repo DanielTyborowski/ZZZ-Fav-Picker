@@ -661,5 +661,27 @@
         "season": 3,
         "version": "3.2",
         "voidHunter": false
+    },
+    {
+        "name": "Phoenix",
+        "img": "img/agents/Icon_Phoenix.png",
+        "rank": "S",
+        "attribute": "Fire",
+        "speciality": "Anomaly",
+        "faction": "Krampus Compliance Authority",
+        "season": 3,
+        "version": "3.3",
+        "voidHunter": false
+    },
+    {
+        "name": "Severian",
+        "img": "img/agents/Icon_Severian.png",
+        "rank": "S",
+        "attribute": "Wind",
+        "speciality": "Attack",
+        "faction": "Metropolitan Order Division",
+        "season": 3,
+        "version": "3.3",
+        "voidHunter": false
     }
 ]
