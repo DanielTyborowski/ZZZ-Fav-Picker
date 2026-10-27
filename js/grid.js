@@ -8,14 +8,55 @@ import { data, characters } from "./data.js";
 
 
 
+function removeSpaces(string) {
+    return string.replace(/\s/g, '');
+}
+
 
 const grid = {
-    createGrid() {
 
-        //console.log(data);
-        //console.log(data.specialities);
+    createFactionGrid() {
+        for (const faction of data.factions) {
+            const factionName = removeSpaces(faction);
+            const factionContainer = dom.create({
+                tagName: 'div',
+                cssClassName: 'faction-container',
+                parent: elements.factionGrid,
+            });
+
+            const factionCell = dom.create({
+                tagName: 'div',
+                cssClassName: 'faction-cell',
+                parent: factionContainer,
+            });
+            dom.create({
+                tagName: 'img',
+                cssClassName: 'faction-icon',
+                parent: factionCell,
+                src: `./data/img/factions/Icon_${factionName}.png`,
+            })
+            dom.create({
+                tagName: 'span',
+                content: faction,
+                cssClassName: 'faction-name',
+                parent: factionCell,
+
+            })
+
+            const cell = dom.create({
+                tagName: 'div',
+                cssClassName: 'faction-selection',
+                parent: factionContainer,
+                attr: {
+                    'data-faction': faction,
+                }
+            });
+        }
+    },
+
+    createAgentGrid() {
+
         elements.firstCell = dom.create({
-            //content: 'First Cell',
             tagName: 'div',
             id: 'first-cell',
             cssClassName: 'first-cell',
@@ -45,9 +86,7 @@ const grid = {
             })
         }
 
-
-
-        // attributes
+        // attributes 
         for (const attribute of data.attributes) {
             const cell = dom.create({
                 //content: attribute,
@@ -61,7 +100,6 @@ const grid = {
                 parent: cell,
                 src: `./data/img/attributes/Icon_${attribute}.png`,
             })
-
 
             for (const speciality of data.specialities) {
                 const cell = dom.create({
@@ -79,21 +117,7 @@ const grid = {
 
 }
 
-elements.agentGrid - addEventListener('click', (e) => {
-    const cell = e.target.closest('.cell');
-    if (!cell) return;
 
-
-    const { speciality, attribute } = cell.dataset;
-
-
-    const matches = characters.filter(character =>
-        character.speciality === speciality &&
-        character.attribute === attribute
-    );
-    console.log(matches)
-    openSelection(cell, matches);
-})
 
 
 export default grid;
