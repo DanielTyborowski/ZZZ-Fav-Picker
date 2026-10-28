@@ -3,7 +3,7 @@
 
 import dom from "./dom.js";
 import elements from "./elements.js";
-import { data, characters } from "./data.js";
+import { data, characters, categories } from "./data.js";
 
 
 
@@ -49,6 +49,7 @@ const grid = {
                 parent: factionContainer,
                 attr: {
                     'data-faction': faction,
+                    'data-id': `faction-${factionName}`,
                 }
             });
         }
@@ -109,11 +110,16 @@ const grid = {
                     attr: {
                         'data-speciality': speciality,
                         'data-attribute': attribute,
+                        'data-id': `agent-${speciality}-${attribute}`,
                     },
                 });
             }
         }
     },
+
+
+
+    
 
 }
 

@@ -1,6 +1,7 @@
 'use strict'
 
 import elements from "./elements.js";
+import storage from "./storage.js";
 
 
 const dom = {
@@ -59,10 +60,13 @@ const dom = {
         elements.agentGrid = document.querySelector('#agent-grid');
         elements.factionGrid = document.querySelector('#faction-grid');
         elements.specialGrid = document.querySelector('#special-grid');
+        elements.resetButton = document.querySelector('#reset-button');
     },
 
     appendEventListeners (){
-
+        elements.resetButton.addEventListener('click', () =>{
+            storage.resetAll(document.querySelectorAll('.cell, .faction-selection'));
+        })
     },
 
 
