@@ -65,6 +65,7 @@ const dom = {
 
     appendEventListeners (){
         elements.resetButton.addEventListener('click', () =>{
+            if (!confirm('Reset Selection?')) return;
             storage.resetAll(document.querySelectorAll('.cell, .faction-selection'));
         })
     },
