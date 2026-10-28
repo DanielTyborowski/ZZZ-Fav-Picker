@@ -12,7 +12,7 @@ body {
 
 #agent-grid {
     display: grid;
-    grid-template-columns: 180px repeat(7, 180px);
+    grid-template-columns: 180px repeat(8, 180px);
     gap: 5px;
 }
 
@@ -29,6 +29,45 @@ body {
 
     border-radius: 15px;
     background-color: gray;
+}
+
+.fav-cell {
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: rgb(75, 75, 75);
+}
+
+.fav-header-cell {
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: rgb(75, 75, 75);
+}
+
+.fav-total-cell {
+    min-height: 160px;
+    min-width: 160px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: rgb(243, 227, 0);
 }
 
 

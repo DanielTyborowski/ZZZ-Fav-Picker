@@ -2,27 +2,30 @@
 
 import elements from "./elements.js";
 import storage from "./storage.js";
+import selection from "./selection.js";
+import { data, characters, wEngines, bangboos, categories } from "./data.js";
+import grid from "./grid.js";
 
 
 const dom = {
     create({
-               content = false,
-               value = false,
-               tagName = 'div',
-               type = false,
-               parent = false,
-               name = false,
-               src = false,
-               href = false,
-               id = false,
-               target = false,
-               cssClassName = false,
-               cssClasses = [],
-               attr = {},
-               listeners = {},
-               styles = {},
-               insert = 'append',
-           } = {}) {
+        content = false,
+        value = false,
+        tagName = 'div',
+        type = false,
+        parent = false,
+        name = false,
+        src = false,
+        href = false,
+        id = false,
+        target = false,
+        cssClassName = false,
+        cssClasses = [],
+        attr = {},
+        listeners = {},
+        styles = {},
+        insert = 'append',
+    } = {}) {
         let neu = document.createElement(tagName);
         if (content) neu.innerHTML = content;
         if (name) neu.setAttribute('name', name);
@@ -54,8 +57,8 @@ const dom = {
         return neu;
 
     },
-    
-    mapping(){
+
+    mapping() {
         elements.main = document.querySelector('#main');
         elements.agentGrid = document.querySelector('#agent-grid');
         elements.factionGrid = document.querySelector('#faction-grid');
@@ -63,10 +66,44 @@ const dom = {
         elements.resetButton = document.querySelector('#reset-button');
     },
 
-    appendEventListeners (){
-        elements.resetButton.addEventListener('click', () =>{
+    appendEventListeners() {
+        elements.resetButton.addEventListener('click', () => {
             if (!confirm('Reset Selection?')) return;
-            storage.resetAll(document.querySelectorAll('.cell, .faction-selection'));
+            storage.resetAll(document.querySelectorAll('.cell, .faction-selection, .fav-cell'));
+        })
+
+        elements.agentGrid.addEventListener('click', (e) => {
+            const cell = e.target.closest('.cell, .fav-cell');
+            if (!cell) return;
+
+            if (cell.dataset.favType) {
+                selection.openSelection(cell, grid.getCandidates(cell));
+                return;
+            }
+
+
+            const { speciality, attribute } = cell.dataset;
+            const matches = characters.filter(character =>
+                character.speciality === speciality &&
+                character.attribute === attribute
+            );
+            console.log(matches)
+            selection.openSelection(cell, matches);
+        })
+
+        elements.factionGrid.addEventListener('click', (e) => {
+            const cell = e.target.closest('.faction-selection');
+            if (!cell) return;
+
+
+            const { faction } = cell.dataset;
+
+
+            const matches = characters.filter(character =>
+                character.faction === faction
+            );
+            console.log(matches)
+            selection.openSelection(cell, matches);
         })
     },
 

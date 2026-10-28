@@ -1,9 +1,10 @@
-'use static'
+'use strict'
 
 
 import dom from "./dom.js";
 import elements from "./elements.js";
 import { data, characters, categories } from "./data.js";
+import storage from "./storage.js";
 
 
 
@@ -87,10 +88,16 @@ const grid = {
             })
         }
 
+        dom.create({
+            tagName: 'div',
+            cssClassName: 'fav-header-cell',
+            content: 'fav',
+            parent: elements.agentGrid,
+        })
+
         // attributes 
         for (const attribute of data.attributes) {
             const cell = dom.create({
-                //content: attribute,
                 tagName: 'div',
                 cssClassName: 'attribute-cell',
                 parent: elements.agentGrid,
@@ -113,15 +120,75 @@ const grid = {
                         'data-id': `agent-${speciality}-${attribute}`,
                     },
                 });
+
+
             }
+            dom.create({
+                tagName: 'div',
+                cssClassName: 'fav-cell',
+                parent: elements.agentGrid,
+                attr: {
+                    'data-id': `fav-row-${attribute}`,
+                    'data-fav-type': 'row',
+                    'data-attribute': attribute,
+                },
+            });
+
         }
+
+
+        dom.create({
+            tagName: 'div',
+            cssClassName: 'fav-cell',
+            content: '★',
+            parent: elements.agentGrid,
+        });
+
+        for (const speciality of data.specialities) {
+            dom.create({
+                tagName: 'div',
+                cssClassName: 'fav-cell',
+                parent: elements.agentGrid,
+                attr: {
+                    'data-id': `fav-col-${speciality}`,
+                    'data-fav-type': 'col',
+                    'data-speciality': speciality,
+                },
+            });
+        }
+
+        dom.create({
+            tagName: 'div',
+            cssClasses: ['fav-cell', 'fav-total-cell'],
+            parent: elements.agentGrid,
+            attr: {
+                'data-id': 'fav-total',
+                'data-fav-type': 'total',
+            },
+        });
     },
 
 
+    getCandidates(favCell) {
+        const saved = storage.load();
+        const { favType, attribute, speciality } = favCell.dataset;
 
-    
+        let selector;
+        if (favType === 'row') selector = `.cell[data-attribute="${attribute}"]`;
+        else if (favType === 'col') selector = `.cell[data-speciality="${speciality}"]`;
+        else selector = '.fav-cell[data-fav-type="row"], .fav-cell[data-fav-type="col"]';
+
+        const unique = new Map();
+        for (const cell of elements.agentGrid.querySelectorAll(selector)) {
+            const item = saved[cell.dataset.id];
+            if (item) unique.set(item.name, item);
+        }
+        return [...unique.values()];
+    },
+
 
 }
+
 
 
 
