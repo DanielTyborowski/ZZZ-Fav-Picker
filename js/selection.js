@@ -83,16 +83,12 @@ const selection = {
                         //cell.dataset.character = character.name;
                         this.applyCharacter(cell, character);
                         storage.save(cell.dataset.id, character);
-
-                        
-                        selectionField.remove();
-                        backdrop.remove();
-                        console.log('Ausgewählt:', character);
+                        close();
                     }
                 },
                 parent: list
             });
-
+            
             dom.create({
                 tagName: 'img',
                 cssClassName: 'character-icon',
@@ -100,6 +96,7 @@ const selection = {
                 attr: { alt: character.name },
                 parent: option,
             });
+            
 
 
         });
