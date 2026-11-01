@@ -1,47 +1,100 @@
+@font-face {
+    font-family: 'ZZZ Font';
+    src: url('../fonts/印品鸿蒙体.ttf') format('truetype');
+}
 
 body {
+    font-family:'ZZZ Font';
+    letter-spacing: 0.02em;
     background-image: url(../data/img/background.webp);
     background-color: black;
 
+
 }
 
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 
 
 
 #agent-grid {
     display: grid;
-    grid-template-columns: 180px repeat(8, 180px);
-    gap: 5px;
+    grid-template-columns: repeat(9, 180px);
+    grid-auto-rows: 180px;
+    gap: 2px;
+
+
+
+
 }
 
 
 
 .cell {
-    min-height: 160px;
-    min-width: 160px;
+    aspect-ratio: 1 / 1;
+    min-height: 0px;
+    min-width: 0px;
+    width: 100%;
+
     border: 3px solid;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
-    background-color: gray;
+    border-radius: 30px;
+    /* background-color: #2b2b2b; */
+
+
+
+    background: #2b2b2b;
+    box-shadow:
+        inset 0 0 3px 4px #3b3b3b;
+}
+
+.cell-empty {
+    min-height: 180px;
+    min-width: 180px;
+    border: 3px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+    background: repeating-linear-gradient(-45deg,
+            rgba(60, 60, 60, 0.35) 0,
+            rgba(60, 60, 60, 0.35) 6px,
+            rgba(170, 170, 170, 0.35) 6px,
+            rgba(170, 170, 170, 0.35) 12px);
+    ;
 }
 
 .fav-cell {
-    min-height: 160px;
-    min-width: 160px;
+    min-height: 180px;
+    min-width: 180px;
     border: 3px solid;
+    border-radius: 30px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
-    background-color: rgb(75, 75, 75);
+
+    background-color: #8a4fd0;
+    background-image:
+        conic-gradient(rgba(255, 255, 255, 0.12) 25%,
+            transparent 0 50%,
+            rgba(255, 255, 255, 0.12) 0 75%,
+            transparent 0),
+        linear-gradient(to bottom, #7a3fc4 0%, #b57de8 100%);
+    background-size: 12px 12px, 100% 100%;
+    box-shadow:
+        inset 0 0 3px 4px #3b3b3b;
 }
 
 .fav-header-cell {
@@ -53,71 +106,76 @@ body {
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
-    background-color: rgb(75, 75, 75);
+    border-radius: 30px;
+    background-color: gray;
+    box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
 .fav-total-cell {
-    min-height: 160px;
-    min-width: 160px;
-    border: 3px solid;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    border-radius: 15px;
-    background-color: rgb(243, 227, 0);
+
+    background-color: #ffae00;
+    background-image:
+        conic-gradient(rgba(255, 255, 255, 0.12) 25%,
+            transparent 0 50%,
+            rgba(255, 255, 255, 0.12) 0 75%,
+            transparent 0),
+        linear-gradient(to bottom, #e8962a 0%, #ffc83d 100%);
+    background-size: 12px 12px, 100% 100%;
 }
 
 
 
-.first-cell{
-    min-height: 160px;
-    min-width: 160px;
+.first-cell {
+    min-height: 180px;
+    min-width: 180px;
     border: 3px solid;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: gray;
+    box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
 
-.attribute-cell{
-    min-height: 160px;
-    min-width: 160px;
+.attribute-cell {
+    min-height: 180px;
+    min-width: 180px;
     border: 3px solid;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: gray;
+    box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
-.speciality-cell{
-    min-height: 160px;
-    min-width: 160px;
+.speciality-cell {
+    min-height: 180px;
+    min-width: 180px;
     border: 3px solid;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: gray;
+    box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
-.speciality-icon{
+.speciality-icon {
     width: 100px;
     height: 100px;
 }
 
-.attribute-icon{
+.attribute-icon {
     width: 100px;
     height: 100px;
 }
@@ -134,7 +192,7 @@ body {
     min-width: 200px;
     max-width: 90vw;
     max-height: 90vh;
-     
+
 
     overflow-y: auto;
 
@@ -194,11 +252,16 @@ body {
 
 
 .character-icon {
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 15px;
+    max-width: 160px;
+    max-height: 160px;
+    border-radius: 20px;
 }
 
+
+.zzz-icon {
+    max-width: 140px;
+    max-height: 140px;
+}
 
 
 
@@ -207,18 +270,39 @@ body {
 
 
 #faction-grid {
+    
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(7, 220px);
     gap: 12px;
+    padding: 0px;
 
 }
+
+
+.faction-container-block {
+    box-sizing: border-box;
+    padding: 16px;
+
+    border: 4px solid #151818;
+    border-radius: 30px;
+
+    background: linear-gradient(180deg, #a6a6a6 0%, #858585 50%, #767676 100%);
+
+    box-shadow:
+    0 0 0 3px #050606,   
+        inset 0 0 0 3px #bdbdbd,              
+        inset 0 -6px 10px rgba(0, 0, 0, 0.3), 
+        0 4px 12px rgba(0, 0, 0, 0.6);        
+}
+
 
 .faction-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     min-width: 0;
 }
+
 
 .faction-cell {
     display: flex;
@@ -228,15 +312,17 @@ body {
     gap: 6px;
 
     padding: 10px;
-    min-height: 100px;
+    min-height: 160px;
 
-    border: 1px solid #555;
-    border-radius: 8px;
+    border: 3px solid;
+    border-radius: 30px;
+    background-color: gray;
+    box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
 .faction-icon {
-    width: 48px;
-    height: 48px;
+    width: 128px;
+    height: 128px;
     object-fit: contain;
 }
 
@@ -244,16 +330,23 @@ body {
     text-align: center;
     overflow-wrap: anywhere;
     color: white;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
+
 
 .faction-selection {
-    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border: 1px dashed #777;
-    border-radius: 8px;
+    min-height: 180px;
+
+    border: 3px solid;
+    border-radius: 30px;
+    background: #2b2b2b;
+    box-shadow: inset 0 0 3px 4px #3b3b3b;
 }
-
-
 
 
 
@@ -264,10 +357,38 @@ body {
 .backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: repeating-linear-gradient(45deg,
+            rgba(60, 60, 60, 0.1) 0,
+            rgba(60, 60, 60, 0.1) 6px,
+            rgba(170, 170, 170, 0.35) 6px,
+            rgba(170, 170, 170, 0.35) 12px);
     display: flex;
     align-items: center;
     justify-self: center;
     z-index: 1000;
     width: 100%;
+}
+
+
+
+.close-button {
+    content: x;
+    color: white;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    background:
+        conic-gradient(#0b0d0e 25%, #171a1b 0 50%, #0b0d0e 0 75%, #171a1b 0) 0 0 / 6px 6px,
+        linear-gradient(160deg, #5a5a5a, #2c2c2c 60%, #3a3a3a);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow:
+        0 0 0 2px #111414,
+        inset 0 4px 10px rgba(0, 0, 0, 0.85),
+        inset 0 0 0 2px rgba(0, 0, 0, 0.6);
 }

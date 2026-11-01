@@ -13,16 +13,28 @@ function removeSpaces(string) {
     return string.replace(/\s/g, '');
 }
 
+function getAgents(speciality, attribute) {
+    return characters.filter(
+        character => character.speciality === speciality && character.attribute === attribute
+    );
+
+}
 
 const grid = {
 
     createFactionGrid() {
         for (const faction of data.factions) {
             const factionName = removeSpaces(faction);
+
+            const factionContainerBlock = dom.create({
+                tagName: 'div',
+                cssClassName: 'faction-container-block',
+                parent: elements.factionGrid,
+            })
             const factionContainer = dom.create({
                 tagName: 'div',
                 cssClassName: 'faction-container',
-                parent: elements.factionGrid,
+                parent: factionContainerBlock,
             });
 
             const factionCell = dom.create({
@@ -36,6 +48,7 @@ const grid = {
                 parent: factionCell,
                 src: `./data/img/factions/Icon_${factionName}.png`,
             })
+            /*
             dom.create({
                 tagName: 'span',
                 content: faction,
@@ -43,7 +56,7 @@ const grid = {
                 parent: factionCell,
 
             })
-
+            */
             const cell = dom.create({
                 tagName: 'div',
                 cssClassName: 'faction-selection',
@@ -65,10 +78,12 @@ const grid = {
             parent: elements.agentGrid,
         });
         dom.create({
+
             tagName: 'img',
-            cssClassName: 'agent-icon',
+            cssClassName: 'zzz-icon',
             parent: elements.firstCell,
-            src: `./data/img/Icon_Agents.png`,
+            src: `./data/img/Icon_ZenlessZoneZero_logo.png`,
+
         })
 
 
@@ -88,11 +103,20 @@ const grid = {
             })
         }
 
-        dom.create({
+        const favHeaderCellTop = dom.create({
             tagName: 'div',
             cssClassName: 'fav-header-cell',
-            content: 'fav',
             parent: elements.agentGrid,
+        })
+        dom.create({
+            tagName: 'img',
+            cssClassName: 'agent-icon',
+            parent: favHeaderCellTop,
+            src: `./data/img/Icon_Agents.png`,
+            
+            
+
+            
         })
 
         // attributes 
@@ -110,9 +134,11 @@ const grid = {
             })
 
             for (const speciality of data.specialities) {
+                const hasAgents = getAgents(speciality, attribute).length > 0;
                 const cell = dom.create({
                     tagName: 'div',
-                    cssClassName: 'cell',
+                    //cssClassName: 'cell',
+                    cssClasses: hasAgents ? ['cell'] : ['cell', 'cell-empty'],
                     parent: elements.agentGrid,
                     attr: {
                         'data-speciality': speciality,
@@ -137,12 +163,17 @@ const grid = {
         }
 
 
-        dom.create({
+        const favHeaderCellBottom = dom.create({
             tagName: 'div',
-            cssClassName: 'fav-cell',
-            content: '★',
+            cssClassName: 'fav-header-cell',
             parent: elements.agentGrid,
         });
+        dom.create({
+            tagName: 'img',
+            cssClassName: 'agent-icon',
+            parent: favHeaderCellBottom,
+            src: `./data/img/Icon_Agents.png`,
+        })
 
         for (const speciality of data.specialities) {
             dom.create({

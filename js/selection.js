@@ -42,7 +42,8 @@ const selection = {
         dom.create({
             tagName: 'button',
             content: '&times;',
-            cssClasses: 'selection-close',
+            //cssClasses: 'selection-close',
+            cssClassName: 'close-button',
             attr: {
                 'aria-label': 'Auswahl schließen'
             },
