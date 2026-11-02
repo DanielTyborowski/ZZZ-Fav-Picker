@@ -7,6 +7,7 @@ import { data, characters, wEngines, bangboos, categories } from "./data.js";
 import grid from "./grid.js";
 
 
+
 const dom = {
     create({
         content = false,
@@ -64,13 +65,11 @@ const dom = {
         elements.factionGrid = document.querySelector('#faction-grid');
         elements.specialGrid = document.querySelector('#special-grid');
         elements.resetButton = document.querySelector('#reset-button');
+        elements.downloadButton = document.querySelector('#download-button');
     },
 
     appendEventListeners() {
-        elements.resetButton.addEventListener('click', () => {
-            if (!confirm('Reset Selection?')) return;
-            storage.resetAll(document.querySelectorAll('.cell, .faction-selection, .fav-cell'));
-        })
+
 
         elements.agentGrid.addEventListener('click', (e) => {
             const cell = e.target.closest('.cell, .fav-cell');
@@ -104,6 +103,26 @@ const dom = {
             );
             console.log(matches)
             selection.openSelection(cell, matches);
+        })
+
+
+        elements.resetButton.addEventListener('click', () => {
+            if (!confirm('Reset Selection?')) return;
+            storage.resetAll(document.querySelectorAll('.cell, .faction-selection, .fav-cell'));
+        })
+
+        elements.downloadButton.addEventListener('click', async () => {
+            modernScreenshot.domToPng(elements.main, {
+                scale: 2,
+                width: elements.main.scrollWidth,
+                height: elements.main.scrollHeight,
+            })
+            .then((dataUrl) => {
+                const link = document.createElement('a');
+                link.download = 'website.png';
+                link.href = dataUrl;
+                link.click();
+            });
         })
     },
 
