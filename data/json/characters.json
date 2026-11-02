@@ -683,5 +683,27 @@
         "season": 3,
         "version": "3.3",
         "voidHunter": false
+    },
+    {
+        "name": "Robin",
+        "img": "img/agents/Icon_Robin.png",
+        "rank": "S",
+        "attribute": "Ether",
+        "speciality": "Defense",
+        "faction": "Unknown Realm",
+        "season": 3,
+        "version": "3.4",
+        "voidHunter": false
+    },
+    {
+        "name": "Kafka",
+        "img": "img/agents/Icon_Kafka.png",
+        "rank": "S",
+        "attribute": "Electric",
+        "speciality": "Anomaly",
+        "faction": "Unknown Realm",
+        "season": 3,
+        "version": "3.4",
+        "voidHunter": false
     }
 ]
