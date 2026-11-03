@@ -491,7 +491,7 @@ body {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .selection-field {
         width: 94vw;
         max-width: 94vw;
@@ -500,9 +500,6 @@ body {
         padding: 12px;
     }
 
-    .selection-header h3 {
-        font-size: 1.1rem;
-    }
 
     .selection-list {
         grid-template-columns: repeat(3, 1fr);   
