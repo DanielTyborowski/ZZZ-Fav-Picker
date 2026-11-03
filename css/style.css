@@ -16,6 +16,7 @@ body {
 #main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
     min-width: max-content;
@@ -492,4 +493,21 @@ body {
 #option-container button:focus-visible {
   outline: 2px solid #b5d100;
   outline-offset: 4px;
+}
+
+@media (max-width: 900px){
+    #main #option-container{
+        width: calc(100vw - 32px);
+        margin: 16px 0 0 16px;
+        position: sticky;
+        left: 16px;
+    }
+
+    #option-container button {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+    }
 }
