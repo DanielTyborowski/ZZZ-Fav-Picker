@@ -705,5 +705,16 @@
         "season": 3,
         "version": "3.4",
         "voidHunter": false
+    },
+    {
+        "name": "Sunbringer",
+        "img": "img/agents/Icon_Sunbringer.png",
+        "rank": "S",
+        "attribute": "Fire",
+        "speciality": "Armorer",
+        "faction": "Roscalifer",
+        "season": 3,
+        "version": "3.4",
+        "voidHunter": true
     }
 ]
