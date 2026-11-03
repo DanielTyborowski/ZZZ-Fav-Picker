@@ -495,19 +495,3 @@ body {
   outline-offset: 4px;
 }
 
-@media (max-width: 900px){
-    #main #option-container{
-        width: calc(100vw - 32px);
-        margin: 16px 0 0 16px;
-        position: sticky;
-        left: 16px;
-    }
-
-    #option-container button {
-        flex: 1;
-        min-width: 0;
-        font-size: 0.8rem;
-        letter-spacing: 0.03em;
-        white-space: nowrap;
-    }
-}
