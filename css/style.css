@@ -11,6 +11,10 @@ body {
     background-image: url(../data/img/background.webp);
     */
     background-color: black;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #main {
@@ -19,7 +23,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    min-width: max-content;
+    min-width: 0;
     background-color: black;
 }
 
