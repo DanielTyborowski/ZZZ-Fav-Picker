@@ -6,7 +6,7 @@
 body {
     font-family:'ZZZ Font';
     letter-spacing: 0.02em;
-    min-width: fit-content;
+    min-width: max-content;
     /*
     background-image: url(../data/img/background.webp);
     */
@@ -16,9 +16,9 @@ body {
 #main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: safe center;
+    align-items: flex-start;
     width: 100%;
+    min-width: max-content;
     background-color: black;
 }
 
@@ -461,7 +461,6 @@ body {
   text-transform: uppercase;
 }
 
-/* gelber Hintergrund, nur sichtbar beim Hover */
 #option-container button::before {
   content: "";
   position: absolute;
@@ -484,7 +483,7 @@ body {
   opacity: 1;
 }
 
-/* der letzte Button bekommt die runde rechte Seite, die schräge Kante nach innen */
+
 #option-container button:last-child::before {
   border-radius: 0;
   clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%);

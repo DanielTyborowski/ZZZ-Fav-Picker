@@ -130,6 +130,7 @@ const dom = {
                 scale: 2,
                 width: elements.main.scrollWidth,
                 height: elements.main.scrollHeight,
+                backgroundColor: '#000',
             })
             .then((dataUrl) => {
                 const link = document.createElement('a');
