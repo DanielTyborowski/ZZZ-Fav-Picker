@@ -2,7 +2,20 @@ import dom from "./dom.js";
 import elements from "./elements.js";
 import storage from "./storage.js";
 
+const vv = window.visualViewport;
 
+if (vv) {
+    const update = () => {
+        const s = document.documentElement.style;
+        s.setProperty('--vv-w', `${vv.width}px`);
+        s.setProperty('--vv-h', `${vv.height}px`);
+        s.setProperty('--vv-x', `${vv.offsetLeft}px`);
+        s.setProperty('--vv-y', `${vv.offsetTop}px`);
+    };
+    update();
+    vv.addEventListener('resize', update);   // Zoom, Adressleiste
+    vv.addEventListener('scroll', update);   // Verschieben bei Zoom
+}
 
 const selection = {
 

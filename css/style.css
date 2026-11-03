@@ -493,20 +493,26 @@ body {
 }
 
 
-
-
 @media (max-width: 1200px) {
+    .backdrop {
+        inset: auto;
+        left: var(--vv-x, 0px);
+        top: var(--vv-y, 0px);
+        width: var(--vv-w, 100vw);
+        height: var(--vv-h, 100vh);
+    }
+
     .selection-field {
-        width: 94vw;
-        max-width: 94vw;
-        max-height: 88vh;
-        max-height: 88dvh;          
+        left: calc(var(--vv-x, 0px) + var(--vv-w, 100vw) / 2);
+        top: calc(var(--vv-y, 0px) + var(--vv-h, 100vh) / 2);
+        width: calc(var(--vv-w, 100vw) * 0.94);
+        max-width: calc(var(--vv-w, 100vw) * 0.94);
+        max-height: calc(var(--vv-h, 100vh) * 0.88);
         padding: 12px;
     }
 
-
     .selection-list {
-        grid-template-columns: repeat(3, 1fr);   
+        grid-template-columns: repeat(3, 1fr);
         gap: 6px;
     }
 
