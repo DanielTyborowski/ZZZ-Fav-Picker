@@ -419,13 +419,6 @@
         "signatureOf": "Corin"
     },
     {
-        "name": "Iris Enigma",
-        "img": "img/w-engines/Icon_Iris_Enigma.png",
-        "rank": "A",
-        "speciality": "Support",
-        "unsure": true
-    },
-    {
         "name": "Kaboom the Cannon",
         "img": "img/w-engines/Icon_Kaboom_the_Cannon.png",
         "rank": "A",

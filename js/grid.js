@@ -3,7 +3,7 @@
 
 import dom from "./dom.js";
 import elements from "./elements.js";
-import { data, characters, categories } from "./data.js";
+import { data, characters, specialChoices } from "./data.js";
 import storage from "./storage.js";
 
 
@@ -48,15 +48,7 @@ const grid = {
                 parent: factionCell,
                 src: `./data/img/factions/Icon_${factionName}.png`,
             })
-            /*
-            dom.create({
-                tagName: 'span',
-                content: faction,
-                cssClassName: 'faction-name',
-                parent: factionCell,
 
-            })
-            */
             const cell = dom.create({
                 tagName: 'div',
                 cssClassName: 'faction-selection',
@@ -113,10 +105,10 @@ const grid = {
             cssClassName: 'agent-icon',
             parent: favHeaderCellTop,
             src: `./data/img/Icon_Agents.png`,
-            
-            
 
-            
+
+
+
         })
 
         // attributes 
@@ -200,6 +192,11 @@ const grid = {
     },
 
 
+
+
+
+
+
     getCandidates(favCell) {
         const saved = storage.load();
         const { favType, attribute, speciality } = favCell.dataset;
@@ -215,6 +212,47 @@ const grid = {
             if (item) unique.set(item.name, item);
         }
         return [...unique.values()];
+    },
+
+
+    createSpecialChoiceGrid() {
+
+
+        for (const specialChoice of data.specialChoices) {
+            const choiceName = removeSpaces(specialChoice);
+            const spcContainerBlock = dom.create({
+                tagName: 'div',
+                cssClassName: 'special-choices-container-block',
+                parent: elements.specialChoiceGrid,
+            })
+            const spcContainer = dom.create({
+                tagName: 'div',
+                cssClassName: 'special-choices-container',
+                parent: spcContainerBlock,
+            });
+
+            const spcCell = dom.create({
+                tagName: 'div',
+                cssClassName: 'special-choices-cell',
+                parent: spcContainer,
+            });
+            dom.create({
+                tagName: 'img',
+                cssClassName: 'choices-icon',
+                parent: spcCell,
+                src: `./data/img/Icon_${choiceName}.png`,
+            })
+
+            const cell = dom.create({
+                tagName: 'div',
+                cssClassName: 'special-choice-selection',
+                parent: spcContainer,
+                attr: {
+                    'data-choice': specialChoice,
+                    'data-id': `choice-${choiceName}`,
+                }
+            });
+        }
     },
 
 

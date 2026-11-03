@@ -39,5 +39,13 @@
         "Flint Workshop",
         "Covenant of Dayat",
         "Unknown Realm"
+    ],
+    "specialChoices":[
+        "Bangboo",
+        "W-Engine",
+        "Void Hunter",
+        "Main Character",
+        "Skins"
+
     ]
 }

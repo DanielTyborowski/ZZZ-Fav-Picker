@@ -34,7 +34,7 @@ const selection = {
 
         dom.create({
             tagName: 'h3',
-            content: 'Choose Charakter',
+            content: 'Choose a Charakter',
             parent: header
         })
 
@@ -42,13 +42,11 @@ const selection = {
         dom.create({
             tagName: 'button',
             content: '&times;',
-            //cssClasses: 'selection-close',
             cssClassName: 'close-button',
             attr: {
                 'aria-label': 'Auswahl schließen'
             },
             listeners: { click: close },
-
             parent: header
         });
 
@@ -81,7 +79,6 @@ const selection = {
                 },
                 listeners: {
                     click: () => {
-                        //cell.dataset.character = character.name;
                         this.applyCharacter(cell, character);
                         storage.save(cell.dataset.id, character);
                         close();

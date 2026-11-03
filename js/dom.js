@@ -3,9 +3,9 @@
 import elements from "./elements.js";
 import storage from "./storage.js";
 import selection from "./selection.js";
-import { data, characters, wEngines, bangboos, categories } from "./data.js";
+import { data, characters, wEngines, bangboos, specialChoices } from "./data.js";
 import grid from "./grid.js";
-
+import specialSources from "./sources.js";
 
 
 const dom = {
@@ -63,7 +63,7 @@ const dom = {
         elements.main = document.querySelector('#main');
         elements.agentGrid = document.querySelector('#agent-grid');
         elements.factionGrid = document.querySelector('#faction-grid');
-        elements.specialGrid = document.querySelector('#special-grid');
+        elements.specialChoiceGrid = document.querySelector('#special-choices-grid');
         elements.resetButton = document.querySelector('#reset-button');
         elements.downloadButton = document.querySelector('#download-button');
     },
@@ -103,6 +103,20 @@ const dom = {
             );
             console.log(matches)
             selection.openSelection(cell, matches);
+        })
+
+
+        elements.specialChoiceGrid.addEventListener('click', (e) => {
+            const cell = e.target.closest('.special-choice-selection');
+            if (!cell) return;
+
+            const getOptions =  specialSources[cell.dataset.choice];
+            if (!getOptions) {
+        console.warn(`Keine Datenquelle für "${cell.dataset.choice}"`, Object.keys(specialSources));
+        return;
+    }
+        
+            selection.openSelection(cell, getOptions);
         })
 
 

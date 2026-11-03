@@ -1,6 +1,6 @@
 'use strict'
 
-import dom from "./dom.js";
+
 
 const STORAGE_KEY = 'agentSelection';
 

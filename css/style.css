@@ -8,8 +8,14 @@ body {
     letter-spacing: 0.02em;
     background-image: url(../data/img/background.webp);
     background-color: black;
+}
 
-
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 *,
@@ -278,8 +284,18 @@ body {
 
 }
 
+#special-choices-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 220px);
+    gap: 12px;
+    padding: 0px;
 
-.faction-container-block {
+}
+
+
+.faction-container-block,
+.special-choices-container-block {
     box-sizing: border-box;
     padding: 16px;
 
@@ -296,7 +312,8 @@ body {
 }
 
 
-.faction-container {
+.faction-container,
+.special-choices-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -304,7 +321,8 @@ body {
 }
 
 
-.faction-cell {
+.faction-cell,
+.special-choices-cell {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,9 +338,11 @@ body {
     box-shadow: inset 0 0 1px 4px #3b3b3b;
 }
 
-.faction-icon {
+.faction-icon,
+.choices-icon {
     width: 128px;
     height: 128px;
+    border-radius: 15px;
     object-fit: contain;
 }
 
@@ -335,7 +355,8 @@ body {
 }
 
 
-.faction-selection {
+.faction-selection,
+.special-choice-selection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,6 +392,9 @@ body {
 
 
 
+
+
+
 .close-button {
     content: x;
     color: white;
@@ -391,4 +415,75 @@ body {
         0 0 0 2px #111414,
         inset 0 4px 10px rgba(0, 0, 0, 0.85),
         inset 0 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+#option-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+  flex-direction: row;
+  gap: 0;
+  padding: 0px;
+  width: fit-content;
+  overflow: hidden;
+
+  background: #0f0f0f;
+  border: 2px solid #d9d9d9;
+  border-radius: 999px;
+}
+
+#option-container button {
+  position: relative;
+  z-index: 0;
+  min-width: 130px;
+  height: 40px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* gelber Hintergrund, nur sichtbar beim Hover */
+#option-container button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: #b5d100;
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%);
+
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#option-container button:hover {
+  color: #111111;
+}
+
+#option-container button:hover::before {
+  opacity: 1;
+}
+
+/* der letzte Button bekommt die runde rechte Seite, die schräge Kante nach innen */
+#option-container button:last-child::before {
+  border-radius: 0;
+  clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#option-container button:focus-visible {
+  outline: 2px solid #b5d100;
+  outline-offset: 4px;
 }
