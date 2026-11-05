@@ -3,7 +3,7 @@
 import elements from "./elements.js";
 import storage from "./storage.js";
 import selection from "./selection.js";
-import { data, characters, wEngines, bangboos, specialChoices } from "./data.js";
+import { data, characters, wEngines, bangboos, } from "./data.js";
 import grid from "./grid.js";
 import specialSources from "./sources.js";
 
@@ -86,7 +86,7 @@ const dom = {
                 character.speciality === speciality &&
                 character.attribute === attribute
             );
-            console.log(matches)
+            //console.log(matches)
             selection.openSelection(cell, matches);
         })
 
@@ -101,7 +101,7 @@ const dom = {
             const matches = characters.filter(character =>
                 character.faction === faction
             );
-            console.log(matches)
+            //console.log(matches)
             selection.openSelection(cell, matches);
         })
 
@@ -134,7 +134,7 @@ const dom = {
             })
             .then((dataUrl) => {
                 const link = document.createElement('a');
-                link.download = 'website.png';
+                link.download = 'My_ZZZ_Favourites.png';
                 link.href = dataUrl;
                 link.click();
             });

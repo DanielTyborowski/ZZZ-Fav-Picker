@@ -3,7 +3,7 @@
 
 import dom from "./dom.js";
 import elements from "./elements.js";
-import { data, characters, specialChoices } from "./data.js";
+import { data, characters } from "./data.js";
 import storage from "./storage.js";
 
 
@@ -26,15 +26,15 @@ const grid = {
         for (const faction of data.factions) {
             const factionName = removeSpaces(faction);
 
-            const factionContainerBlock = dom.create({
+            const factionContainerWrapper = dom.create({
                 tagName: 'div',
-                cssClassName: 'faction-container-block',
+                cssClassName: 'faction-container-wrapper',
                 parent: elements.factionGrid,
             })
             const factionContainer = dom.create({
                 tagName: 'div',
                 cssClassName: 'faction-container',
-                parent: factionContainerBlock,
+                parent: factionContainerWrapper,
             });
 
             const factionCell = dom.create({
@@ -129,7 +129,6 @@ const grid = {
                 const hasAgents = getAgents(speciality, attribute).length > 0;
                 const cell = dom.create({
                     tagName: 'div',
-                    //cssClassName: 'cell',
                     cssClasses: hasAgents ? ['cell'] : ['cell', 'cell-empty'],
                     parent: elements.agentGrid,
                     attr: {
@@ -220,15 +219,15 @@ const grid = {
 
         for (const specialChoice of data.specialChoices) {
             const choiceName = removeSpaces(specialChoice);
-            const spcContainerBlock = dom.create({
+            const spcContainerWrapper = dom.create({
                 tagName: 'div',
-                cssClassName: 'special-choices-container-block',
+                cssClassName: 'special-choices-container-wrapper',
                 parent: elements.specialChoiceGrid,
             })
             const spcContainer = dom.create({
                 tagName: 'div',
                 cssClassName: 'special-choices-container',
-                parent: spcContainerBlock,
+                parent: spcContainerWrapper,
             });
 
             const spcCell = dom.create({

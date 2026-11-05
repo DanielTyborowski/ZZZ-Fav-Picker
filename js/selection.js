@@ -13,8 +13,8 @@ if (vv) {
         s.setProperty('--vv-y', `${vv.offsetTop}px`);
     };
     update();
-    vv.addEventListener('resize', update);   // Zoom, Adressleiste
-    vv.addEventListener('scroll', update);   // Verschieben bei Zoom
+    vv.addEventListener('resize', update);   
+    vv.addEventListener('scroll', update);   
 }
 
 const selection = {
